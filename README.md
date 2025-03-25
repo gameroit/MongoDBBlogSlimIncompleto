@@ -11,7 +11,7 @@ docker compose up -d
 ```
 3. Instalar dependencias:
 ```bash
-docker compose php composer install
+docker compose exec php composer install
 ```
 4. Configurar la conexión a MongoDB en `public/connection.php`
 
