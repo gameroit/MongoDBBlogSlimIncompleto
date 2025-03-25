@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Documentation</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>API REST para gestión de posts de un blog</h1>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Método</th>
+            <th>Endpoint</th>
+            <th>Descripción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>GET</td>
+            <td><code>/api/posts/id</code></td>
+            <td>Obtener un post por ID</td>
+          </tr>
+          <tr>
+            <td>GET</td>
+            <td><code>/api/posts?tag=tag</code></td>
+            <td>
+              Obtener todos los posts que contienen la etiqueta proporcionada
+            </td>
+          </tr>
+          <tr>
+            <td>POST</td>
+            <td><code>/api/posts</code></td>
+            <td>Crear un nuevo post</td>
+          </tr>
+          <tr>
+            <td>POST</td>
+            <td><code>/api/posts/id/comments</code></td>
+            <td>Añadir un comentario a un post</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="container">
+      <h2>Ejemplo de JSON de un post</h2>
+      <pre>
+        <code>
+          {
+            "body": "Lore ipsum",
+            "permalink": "TqoHkbHyUgLyCKWgPLqm",
+            "author": "machine",
+            "title": "Lore ipsum",
+            "tags": [
+              "Lore",
+              "ipsum"
+            ],
+            "comments": [
+              {
+                "body": "Lore ipsum",
+                "email": "john@doe.com",
+                "author": "John Doe"
+              }
+            ]
+          }
+        </code>
+      </pre>
+    </div>
+
+    <div class="container">
+      <h2>Ejemplo de JSON de un comentario</h2>
+      <pre>
+        <code>
+          {
+            "body": "Hello world!",
+            "email": "foo@bar.com",
+            "author": "Foo Bar"
+          }
+        </code>
+      </pre>
+    </div>
+
+    <!-- Scripts necesarios para Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
