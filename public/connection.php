@@ -5,6 +5,8 @@
  * Create a new MongoDB connection
  * *********
  */
+
+require '../vendor/autoload.php';
 $mongo = new MongoDB\Client("mongodb://localhost:27017");      // Change this value to set the connection to the MongoDB database
 
 // Set the database and collection
