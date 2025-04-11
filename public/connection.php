@@ -5,7 +5,7 @@
  * Create a new MongoDB connection
  * *********
  */
-$mongo = null;      // Change this value to set the connection to the MongoDB database
+$mongo = new MongoDB\Client("mongodb://localhost:27017");      // Change this value to set the connection to the MongoDB database
 
 // Set the database and collection
 /**********
@@ -13,5 +13,5 @@ $mongo = null;      // Change this value to set the connection to the MongoDB da
  * Select the 'blog' database and the 'posts' collection
  * *********
  */
-$database = null;   // Change this value to set the database
-$posts = null;      // Change this value to set the collection
+$database = $mongo->blog;   // Change this value to set the database
+$posts = $database->posts;      // Change this value to set the collection
